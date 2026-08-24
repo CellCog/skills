@@ -29,6 +29,7 @@ result = client.create_chat(
     notify_session_key="agent:main:main",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 ```
 
@@ -40,6 +41,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 print(result["message"])
 ```
@@ -146,16 +148,16 @@ CellCog can create content in various aesthetics:
 
 ---
 
-## Chat Mode for Social Content
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Single posts, Stories, standard Reels | `"agent"` |
-| Multi-part campaigns, brand storytelling series, complex video concepts | `"agent team"` |
+**Use `chat_mode="agent", chat_tier="max"` for short-form video production.** Even short videos run the full production pipeline; campaign coherence needs depth.
 
-**Use `"agent"` for most social content.** Individual posts, Reels, and carousels execute well in agent mode.
+| Scenario | Recommended |
+|----------|-------------|
+| Reels, TikToks, campaign series | `chat_mode="agent", chat_tier="max"` |
+| Single throwaway clips | `chat_mode="agent"` (defaults to `"flash"`) |
 
-**Use `"agent team"` for campaign-level thinking** - when you need a cohesive content strategy across multiple pieces or complex creative direction.
+Agent Team (`chat_mode="team"`) is reserved for deep research — short-form video production runs best on Agent max.
 
 ---
 

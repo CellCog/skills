@@ -203,16 +203,16 @@ Tell CellCog which platform you're targeting and it will optimize automatically.
 
 ---
 
-## Chat Mode for GIFs
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Individual GIFs — reactions, product shots, cinemagraphs | `"agent"` |
-| GIF sets — multiple coordinated GIFs for a campaign or sticker pack | `"agent team"` |
+| Scenario | Recommended |
+|----------|-------------|
+| Single GIFs and small sets | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| Cohesive sets sharing one character or style | `chat_mode="agent", chat_tier="max"` |
 
-**Use `"agent"` for most GIF work.** Single GIFs execute well in agent mode.
+**The flash tier is the default and handles most GIF generation well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
 
-**Use `"agent team"` when you need a cohesive set** — like 10 reaction GIFs with the same character, or a suite of product GIFs that share a visual style.
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for GIF generation.
 
 ---
 

@@ -39,6 +39,7 @@ result = client.create_chat(
     notify_session_key="agent:main:main",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 ```
 
@@ -50,6 +51,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 print(result["message"])
 ```
@@ -191,11 +193,16 @@ Grumbleton is skeptical, Luna is optimistic. Both stay in character.
 
 ---
 
-## Chat Mode
+## Choosing Mode & Tier
 
-**Use `chat_mode="agent"`** for all avatar tasks. Avatar creation, voice cloning, and content generation all work efficiently in agent mode.
+**Use `chat_mode="agent", chat_tier="max"` for avatar video production.** Avatar consistency across scenes and lip-synced dialogue need full reasoning depth.
 
-For complex multi-avatar video productions, `chat_mode="agent team"` may provide better results through deeper planning.
+| Scenario | Recommended |
+|----------|-------------|
+| Avatar videos, multi-avatar scenes | `chat_mode="agent", chat_tier="max"` |
+| Single avatar stills | `chat_mode="agent"` (defaults to `"flash"`) |
+
+Agent Team (`chat_mode="team"`) is reserved for deep research — avatar video production runs best on Agent max.
 
 ---
 

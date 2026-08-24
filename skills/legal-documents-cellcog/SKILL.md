@@ -29,6 +29,7 @@ result = client.create_chat(
     notify_session_key="agent:main:main",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 ```
 
@@ -40,6 +41,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 print(result["message"])
 ```
@@ -149,20 +151,18 @@ Essential documents for founders:
 
 ---
 
-## Chat Mode for Legal
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Single contract, NDA, or policy | `"agent"` |
-| Complex multi-document legal packages | `"agent"` |
-| Deep regulatory research or compliance analysis | `"agent team"` |
-| High-stakes contracts, litigation research, regulatory filings | `"agent team max"` |
+**Use `chat_mode="agent", chat_tier="max"` for legal work.** Legal drafting is quality-critical — the cost of an error far exceeds the cost of deeper reasoning.
 
-**Use `"agent"` for most legal documents.** CellCog handles contracts, policies, and standard legal documents excellently in agent mode.
+| Scenario | Recommended |
+|----------|-------------|
+| Contracts, filings, compliance documents | `chat_mode="agent", chat_tier="max"` |
+| Informal summaries of a document you provide | `chat_mode="agent"` (defaults to `"flash"`) |
 
-**Use `"agent team"` for complex legal research** — multi-jurisdiction compliance analysis, regulatory deep-dives, or when the legal reasoning itself is the deliverable.
+Agent Team (`chat_mode="team"`) is reserved for deep research — legal work runs best on Agent max.
+`chat_mode="team"` for multi-jurisdiction regulatory RESEARCH (research, not drafting).
 
-**Use `"agent team max"` for high-stakes legal work** — litigation preparation, M&A due diligence contracts, regulatory compliance for heavily regulated industries, or any legal work where the cost of an error far exceeds the cost of deeper analysis. All settings are maxed for the deepest reasoning. Requires ≥2,000 credits.
 
 ---
 

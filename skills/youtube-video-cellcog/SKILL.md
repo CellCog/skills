@@ -27,6 +27,7 @@ result = client.create_chat(
     notify_session_key="agent:main:main",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 ```
 
@@ -38,6 +39,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 print(result["message"])
 ```
@@ -145,16 +147,16 @@ Content planning before production:
 
 ---
 
-## Chat Mode for YouTube Content
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Shorts, thumbnails, scripts, standard tutorials | `"agent"` |
-| Documentary-style content, complex video essays, multi-part series planning | `"agent team"` |
+**Use `chat_mode="agent", chat_tier="max"` for YouTube video production.** Long-form video needs script craft, pacing, and multi-segment production.
 
-**Use `"agent"` for most YouTube content.** Shorts, thumbnails, and standard videos execute well in agent mode.
+| Scenario | Recommended |
+|----------|-------------|
+| Full videos, documentaries, video essays | `chat_mode="agent", chat_tier="max"` |
+| Quick shorts or tests | `chat_mode="agent"` (defaults to `"flash"`) |
 
-**Use `"agent team"` for complex narratives** - documentaries, video essays, or content requiring deep research and storytelling craft.
+Agent Team (`chat_mode="team"`) is reserved for deep research — YouTube video production runs best on Agent max.
 
 ---
 

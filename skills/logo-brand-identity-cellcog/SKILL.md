@@ -28,7 +28,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     notify_session_key="agent:main:main",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="creative",
 )
 ```
 
@@ -39,7 +39,7 @@ client = CellCogClient(agent_provider="openclaw|cursor|claude-code|codex|...")
 result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="creative",
 )
 print(result["message"])
 ```
@@ -170,16 +170,17 @@ A complete brand kit typically includes:
 
 ---
 
-## Chat Mode for Branding
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Logos, color palettes, individual brand assets | `"agent"` |
-| Complete brand systems, strategic brand development | `"agent team"` |
+**Use `chat_mode="creative"` for logo and brand work** — the craft-first mode tuned for design taste, visual polish, and voice.
 
-**Use `"agent"` for specific brand assets.** Logos, color palettes, and templates execute well in agent mode.
+| Scenario | Recommended |
+|----------|-------------|
+| Logos, brand systems, identity packages | `chat_mode="creative"` (default tier `"core"`) |
+| Maximum craft on high-stakes pieces | `chat_mode="creative", chat_tier="max"` |
+| Quick disposable drafts | `chat_mode="agent"` (defaults to `"flash"`) |
 
-**Use `"agent team"` for complete brand development** - when you need strategic thinking about positioning, comprehensive systems, and multiple creative directions explored.
+Note: `"creative"` has no `"flash"` tier. Agent Team (`chat_mode="team"`) is reserved for deep research.
 
 ---
 

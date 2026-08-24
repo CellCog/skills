@@ -40,7 +40,8 @@ result = client.create_chat(
     prompt="[your task prompt]",
     notify_session_key="agent:main:main",
     task_label="my-task",
-    chat_mode="agent core",
+    chat_mode="agent",
+    chat_tier="max",
     enable_cowork=True,
     cowork_working_directory="/path/to/project",
 )
@@ -53,7 +54,8 @@ client = CellCogClient(agent_provider="openclaw|cursor|claude-code|codex|...")
 result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
-    chat_mode="agent core",
+    chat_mode="agent",
+    chat_tier="max",
     enable_cowork=True,
     cowork_working_directory="/path/to/project",
 )
@@ -101,7 +103,8 @@ if not status["connected"]:
 result = client.create_chat(
     prompt="Refactor the auth module to use JWT tokens",
     notify_session_key="agent:main:main",  # OpenClaw only
-    chat_mode="agent core",
+    chat_mode="agent",
+    chat_tier="max",
     enable_cowork=True,
     cowork_working_directory="/Users/me/project",
     task_label="refactor-auth",
@@ -110,7 +113,8 @@ result = client.create_chat(
 # All other agents (blocks until done):
 result = client.create_chat(
     prompt="Refactor the auth module to use JWT tokens",
-    chat_mode="agent core",
+    chat_mode="agent",
+    chat_tier="max",
     enable_cowork=True,
     cowork_working_directory="/Users/me/project",
     task_label="refactor-auth",
@@ -148,23 +152,15 @@ All commands output JSON for easy agent parsing:
 
 ---
 
-## Chat Mode for Co-work
+## Choosing Mode & Tier
 
-Use `"agent core"` mode for coding tasks — lightweight context focused on code, terminal, and file operations. Multimedia tools load on demand when needed.
+**Use `chat_mode="agent", chat_tier="max"` for all coding work** — code needs the deepest reasoning tier. The SDK applies `"max"` automatically whenever `enable_cowork=True`, so co-work sessions get it even without an explicit tier.
 
-```python
-result = client.create_chat(
-    prompt="Your coding task",
-    chat_mode="agent core",
-    enable_cowork=True,
-    cowork_working_directory="/Users/me/project",
-    task_label="my-task",
-)
-```
+`"agent core"` is a legacy name that still works forever (the server maps it to Agent max), but new code should pass `chat_mode="agent", chat_tier="max"`.
 
-`"agent"` mode also works with co-work but loads all multimedia tools upfront. Use `"agent core"` for faster, more focused coding sessions.
+Agent Team (`chat_mode="team"`) is reserved for deep research — use it only when the task IS research that happens to involve code.
 
-See https://cellcog.ai for complete SDK API reference — delivery modes, `send_message()`, timeouts, and more.
+Browse rides Co-work: `create_chat(enable_browse=True, browser_profile_id=...)` lets the agent drive the user's real Chrome alongside the terminal (profiles discoverable via `client.get_browser_status()`; enabling Browse auto-enables Co-work server-side).
 
 ---
 
@@ -212,4 +208,3 @@ npx skills add cellcog/skills --skill coding-agent-cellcog
 # OpenClaw
 clawhub install coding-agent-cellcog
 ```
-

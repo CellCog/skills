@@ -29,6 +29,7 @@ result = client.create_chat(
     notify_session_key="agent:main:main",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 ```
 
@@ -40,6 +41,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 print(result["message"])
 ```
@@ -126,16 +128,16 @@ CellCog spreadsheets can include:
 
 ---
 
-## Chat Mode for Spreadsheets
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Budget templates, trackers, data tables, basic calculations | `"agent"` |
-| Complex financial models with multi-scenario analysis, intricate formulas | `"agent team"` |
+**Use `chat_mode="agent", chat_tier="max"` for spreadsheet work.** Financial models and formula correctness are coding-grade work where errors are costly.
 
-**Default to `"agent"`** for most spreadsheet requests. CellCog's agent mode handles formulas, formatting, charts, and data organization efficiently.
+| Scenario | Recommended |
+|----------|-------------|
+| Financial models, multi-sheet workbooks | `chat_mode="agent", chat_tier="max"` |
+| Simple one-table sheets | `chat_mode="agent"` (defaults to `"flash"`) |
 
-Reserve `"agent team"` for complex financial modeling requiring deep accuracy validation—like DCF models, multi-scenario projections, or interconnected workbooks where formula correctness is critical.
+Agent Team (`chat_mode="team"`) is reserved for deep research — spreadsheet work runs best on Agent max.
 
 ---
 

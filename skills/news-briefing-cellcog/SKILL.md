@@ -138,17 +138,16 @@ CellCog News Cog is designed with agent workflows in mind. The output is:
 
 ---
 
-## Chat Mode for News
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Daily briefings, quick news summaries | `"agent"` |
-| Competitive intelligence, single-topic digests | `"agent"` |
-| Deep trend analysis, comprehensive industry reports | `"agent team"` |
+| Scenario | Recommended |
+|----------|-------------|
+| Daily briefings, topic summaries | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| Deep trend analysis across many sources | `chat_mode="team"` — that is research |
 
-**Use `"agent"` for most news tasks.** Daily briefings, competitive monitoring, and news digests execute well.
+**The flash tier is the default and handles most news briefings well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
 
-**Use `"agent team"` for deep trend analysis** — when you need multi-source synthesis across dozens of publications and research papers.
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for news briefings.
 
 ---
 

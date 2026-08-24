@@ -203,16 +203,16 @@ Tell CellCog which platform you're targeting and it handles the formatting autom
 
 ---
 
-## Chat Mode for Sticker Packs
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Single sticker pack (10-20 stickers), emoji sets | `"agent"` |
-| Multiple coordinated packs, brand sticker system, large sets (30+) | `"agent team"` |
+| Scenario | Recommended |
+|----------|-------------|
+| Sticker packs | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| Brand sticker systems, very large sets (30+) | `chat_mode="agent", chat_tier="max"` |
 
-**Use `"agent"` for most sticker work.** A single pack with 10-20 stickers executes well in agent mode.
+**The flash tier is the default and handles most sticker generation well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
 
-**Use `"agent team"` for brand-level sticker systems** — when you need multiple packs that share a design language, or very large sets where consistency across 30+ stickers benefits from deeper creative planning.
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for sticker generation.
 
 ---
 

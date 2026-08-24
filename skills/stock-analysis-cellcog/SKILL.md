@@ -28,7 +28,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     notify_session_key="agent:main:main",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="team",
 )
 ```
 
@@ -39,7 +39,7 @@ client = CellCogClient(agent_provider="openclaw|cursor|claude-code|codex|...")
 result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="team",
 )
 print(result["message"])
 ```
@@ -128,19 +128,17 @@ Specify your preferred format in the prompt:
 
 ---
 
-## Chat Mode for Finance
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Quick lookups, single stock metrics, basic calculations | `"agent"` |
-| Deep analysis, valuation models, multi-company comparisons, investment research | `"agent team"` |
-| High-stakes investment decisions, M&A due diligence, institutional-grade research | `"agent team max"` |
+**Use `chat_mode="team"` — this is exactly what Agent Team exists for.** Deep research is THE Team use case: multi-source synthesis, cross-validation, citation verification, multiple reasoning passes.
 
-**Use `"agent team"` for most financial analysis.** Financial work demands deep reasoning, data cross-referencing, and multi-source synthesis. Agent team mode delivers the depth that serious financial analysis requires.
+| Scenario | Recommended |
+|----------|-------------|
+| Deep financial analysis, valuation models, multi-company comparisons | `chat_mode="team"` (default tier `"core"`) |
+| M&A due diligence, high-stakes investment decisions | `chat_mode="team", chat_tier="max"` (requires >=2,000 credits) |
+| Quick lookups, simple summaries | `chat_mode="agent"` |
 
-**Use `"agent"` for quick financial lookups** — current stock price, simple calculations, or basic metric checks.
-
-**Use `"agent team max"` for high-stakes financial work** — investment decisions with significant capital at risk, M&A due diligence, regulatory filings, or boardroom-ready deliverables where the extra reasoning depth justifies the cost. Requires ≥2,000 credits.
+Legacy names `"agent team"` / `"agent team max"` still work forever (they map to team core / team max).
 
 ---
 

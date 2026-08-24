@@ -183,9 +183,16 @@ English, Spanish, French, German, Italian, Portuguese, Chinese (Mandarin/Cantone
 
 ---
 
-## Chat Mode
+## Choosing Mode & Tier
 
-**Use `chat_mode="agent"`** for all audio tasks. Audio generation executes efficiently in agent mode — no need for agent team.
+| Scenario | Recommended |
+|----------|-------------|
+| Speech, narration, sound effects | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| Long-form productions with many segments | `chat_mode="agent", chat_tier="max"` |
+
+**The flash tier is the default and handles most audio generation well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
+
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for audio generation.
 
 ---
 

@@ -29,6 +29,7 @@ result = client.create_chat(
     notify_session_key="agent:main:main",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 ```
 
@@ -40,6 +41,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 print(result["message"])
 ```
@@ -191,16 +193,16 @@ Applied ML without the setup:
 
 ---
 
-## Chat Mode for Data
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Quick data cleaning, simple charts, basic statistics | `"agent"` |
-| Deep analysis with multiple techniques, ML modeling, comprehensive reports | `"agent team"` |
+**Use `chat_mode="agent", chat_tier="max"` for data analysis.** Analysis is coding work — pipelines, statistics, and modeling need the deepest tier.
 
-**Use `"agent"` for most data work.** Data cleaning, EDA, chart generation, and standard statistical analysis execute well in agent mode.
+| Scenario | Recommended |
+|----------|-------------|
+| All data analysis and ML work | `chat_mode="agent", chat_tier="max"` |
+| Trivial one-column summaries | `chat_mode="agent"` (defaults to `"flash"`) |
 
-**Use `"agent team"` for complex analytical projects** — multi-technique analysis, ML model comparisons, or when you need deep domain reasoning about what the data means.
+Agent Team (`chat_mode="team"`) is reserved for deep research — data analysis runs best on Agent max.
 
 ---
 

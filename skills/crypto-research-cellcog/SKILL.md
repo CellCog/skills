@@ -28,7 +28,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     notify_session_key="agent:main:main",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="team",
 )
 ```
 
@@ -39,7 +39,7 @@ client = CellCogClient(agent_provider="openclaw|cursor|claude-code|codex|...")
 result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="team",
 )
 print(result["message"])
 ```
@@ -132,19 +132,17 @@ Due diligence on new projects:
 
 ---
 
-## Chat Mode for Crypto
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Quick price checks, simple token lookups, basic metrics | `"agent"` |
-| Deep token analysis, DeFi research, ecosystem mapping, portfolio strategy | `"agent team"` |
-| Institutional due diligence, high-stakes portfolio decisions, regulatory analysis | `"agent team max"` |
+**Use `chat_mode="team"` — this is exactly what Agent Team exists for.** Deep research is THE Team use case: multi-source synthesis, cross-validation, citation verification, multiple reasoning passes.
 
-**Use `"agent team"` for most crypto research.** The crypto space requires synthesizing information from many sources — protocol docs, on-chain data, market analysis, social sentiment. Agent team mode delivers the multi-source depth that serious crypto research demands.
+| Scenario | Recommended |
+|----------|-------------|
+| Token analysis, DeFi research, ecosystem mapping | `chat_mode="team"` (default tier `"core"`) |
+| Institutional due diligence, high-stakes portfolio decisions | `chat_mode="team", chat_tier="max"` (requires >=2,000 credits) |
+| Quick lookups, simple summaries | `chat_mode="agent"` |
 
-**Use `"agent"` for quick lookups** — current prices, basic metrics, or simple factual questions.
-
-**Use `"agent team max"` for institutional-grade crypto work** — fund-level due diligence, high-stakes portfolio rebalancing, regulatory compliance research, or any crypto analysis where significant capital is at risk. All settings maxed for the deepest reasoning. Requires ≥2,000 credits.
+Legacy names `"agent team"` / `"agent team max"` still work forever (they map to team core / team max).
 
 ---
 

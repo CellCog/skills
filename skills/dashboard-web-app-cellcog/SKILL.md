@@ -26,7 +26,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     notify_session_key="agent:main:main",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="creative",
 )
 ```
 
@@ -37,7 +37,7 @@ client = CellCogClient(agent_provider="openclaw|cursor|claude-code|codex|...")
 result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="creative",
 )
 print(result["message"])
 ```
@@ -128,18 +128,17 @@ You can provide data via:
 
 ---
 
-## Chat Mode for Dashboards
+## Choosing Mode & Tier
 
-Choose based on complexity:
+**Use `chat_mode="creative"` for dashboards and web apps** — the craft-first mode tuned for design taste, visual polish, and voice.
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Standard dashboards, KPI trackers, data visualizations, charts | `"agent"` |
-| Complex interactive apps, games, novel data explorers | `"agent team"` |
+| Scenario | Recommended |
+|----------|-------------|
+| Dashboards, KPI trackers, interactive apps | `chat_mode="creative"` (default tier `"core"`) |
+| Maximum craft on high-stakes pieces | `chat_mode="creative", chat_tier="max"` |
+| Quick disposable drafts | `chat_mode="agent"` (defaults to `"flash"`) |
 
-**Default to `"agent"`** for most dashboard requests. CellCog's agent mode handles charts, tables, filters, and interactivity efficiently.
-
-Reserve `"agent team"` for truly complex applications requiring significant design thinking—like building a novel game mechanic or a highly customized analytical tool with multiple interconnected features.
+Note: `"creative"` has no `"flash"` tier. Agent Team (`chat_mode="team"`) is reserved for deep research.
 
 ---
 

@@ -209,16 +209,16 @@ Official documents:
 
 ---
 
-## Chat Mode for Documents
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Standard documents - resumes, invoices, reports, certificates | `"agent"` |
-| Complex documents requiring narrative craft - proposals, white papers, case studies | `"agent team"` |
+| Scenario | Recommended |
+|----------|-------------|
+| Reports, guides, standard documents | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| High-stakes documents where persuasion and narrative craft matter (investor proposals, white papers) | `chat_mode="agent", chat_tier="max"` |
 
-**Use `"agent"` for most documents.** Resumes, contracts, reports, and standard business documents execute well in agent mode.
+**The flash tier is the default and handles most document generation well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
 
-**Use `"agent team"` for high-stakes documents** where persuasion and narrative flow matter—investor proposals, detailed white papers, compelling case studies.
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for document generation.
 
 ---
 

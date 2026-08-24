@@ -199,16 +199,16 @@ CellCog can help with virtually any subject:
 
 ---
 
-## Chat Mode for Learning
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Homework help, concept explanations, practice problems | `"agent"` |
-| Comprehensive study guides, full curriculum design, deep research | `"agent team"` |
+| Scenario | Recommended |
+|----------|-------------|
+| Explanations, practice problems, study help | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| Full curriculum design, comprehensive study guides | `chat_mode="agent", chat_tier="max"` |
 
-**Use `"agent"` for most learning.** Quick explanations, homework help, and study materials execute well in agent mode.
+**The flash tier is the default and handles most tutoring well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
 
-**Use `"agent team"` for comprehensive learning** - full course outlines, research papers, or when you need multi-source synthesis.
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for tutoring.
 
 ---
 

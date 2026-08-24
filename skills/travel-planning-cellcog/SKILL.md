@@ -119,15 +119,16 @@ Specify your preferred format. CellCog defaults to PDF when no format is specifi
 
 ---
 
-## Chat Mode for Travel
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Single trip itinerary | `"agent"` |
-| Quick destination research | `"agent"` |
-| Complex multi-country planning with deep research | `"agent team"` |
+| Scenario | Recommended |
+|----------|-------------|
+| Itineraries and trip plans | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| Complex multi-country planning | `chat_mode="agent", chat_tier="max"` |
 
-**Use `"agent"` for most travel planning.**
+**The flash tier is the default and handles most travel planning well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
+
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for travel planning.
 
 ---
 

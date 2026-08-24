@@ -141,11 +141,16 @@ Let's be real about what's hard:
 
 ---
 
-## Chat Mode for Memes
+## Choosing Mode & Tier
 
-**Use `chat_mode="agent"`** for meme creation.
+| Scenario | Recommended |
+|----------|-------------|
+| Memes and quick humor content | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| Large coordinated meme campaigns | `chat_mode="agent", chat_tier="max"` |
 
-Memes are quick creative bursts, not deep deliberation. Agent mode's faster iteration matches meme culture's rapid pace.
+**The flash tier is the default and handles most meme generation well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
+
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for meme generation.
 
 ---
 

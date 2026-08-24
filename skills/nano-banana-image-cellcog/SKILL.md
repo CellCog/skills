@@ -104,15 +104,16 @@ Transform and enhance existing images:
 
 ---
 
-## Chat Mode
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Single images, quick edits | `"agent"` |
-| Character-consistent series, complex compositions | `"agent"` |
-| Large sets with brand guidelines | `"agent team"` |
+| Scenario | Recommended |
+|----------|-------------|
+| Quick generations and edits | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| Large sets with strict brand guidelines | `chat_mode="agent", chat_tier="max"` |
 
-**Use `"agent"` for most image work.**
+**The flash tier is the default and handles most image work well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
+
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for image work.
 
 ---
 

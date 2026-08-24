@@ -26,7 +26,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     notify_session_key="agent:main:main",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="creative",
 )
 ```
 
@@ -37,7 +37,7 @@ client = CellCogClient(agent_provider="openclaw|cursor|claude-code|codex|...")
 result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="creative",
 )
 print(result["message"])
 ```
@@ -168,16 +168,17 @@ Deep character work:
 
 ---
 
-## Chat Mode for Stories
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Short stories, scenes, character work, outlines | `"agent"` |
-| Complex narratives, novel development, deep world building | `"agent team"` |
+**Use `chat_mode="creative"` for creative writing** — the craft-first mode tuned for design taste, visual polish, and voice.
 
-**Use `"agent"` for most creative writing.** Short stories, individual scenes, and character development execute well in agent mode.
+| Scenario | Recommended |
+|----------|-------------|
+| Stories, novels, scripts, world building | `chat_mode="creative"` (default tier `"core"`) |
+| Maximum craft on high-stakes pieces | `chat_mode="creative", chat_tier="max"` |
+| Quick disposable drafts | `chat_mode="agent"` (defaults to `"flash"`) |
 
-**Use `"agent team"` for narrative complexity** - novel-length outlines, intricate plot development, or multi-layered world building that benefits from deep thinking.
+Note: `"creative"` has no `"flash"` tier. Agent Team (`chat_mode="team"`) is reserved for deep research.
 
 ---
 

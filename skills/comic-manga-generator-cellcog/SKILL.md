@@ -26,7 +26,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     notify_session_key="agent:main:main",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="creative",
 )
 ```
 
@@ -37,7 +37,7 @@ client = CellCogClient(agent_provider="openclaw|cursor|claude-code|codex|...")
 result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="creative",
 )
 print(result["message"])
 ```
@@ -194,16 +194,17 @@ Request specific layouts:
 
 ---
 
-## Chat Mode for Comics
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Single pages, comic strips, character designs | `"agent"` |
-| Multi-page sequences, full episodes, complex narratives | `"agent team"` |
+**Use `chat_mode="creative"` for comics and manga** — the craft-first mode tuned for design taste, visual polish, and voice.
 
-**Use `"agent"` for most comic work.** Individual pages and strips execute well in agent mode.
+| Scenario | Recommended |
+|----------|-------------|
+| Comic pages, webtoon episodes, manga panels | `chat_mode="creative"` (default tier `"core"`) |
+| Maximum craft on high-stakes pieces | `chat_mode="creative", chat_tier="max"` |
+| Quick disposable drafts | `chat_mode="agent"` (defaults to `"flash"`) |
 
-**Use `"agent team"` for narrative complexity** - full webtoon episodes, multi-page fight sequences, or when you need story and art direction working together.
+Note: `"creative"` has no `"flash"` tier. Agent Team (`chat_mode="team"`) is reserved for deep research.
 
 ---
 

@@ -123,17 +123,16 @@ All 3D models are delivered as **GLB files** (binary glTF) — the universal web
 
 ---
 
-## Chat Mode for 3D
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Single 3D object from a clear description or image | `"agent"` |
-| Batch generation (5-20 objects from a list) | `"agent"` |
-| Complex game asset pipeline with style consistency | `"agent team"` |
+| Scenario | Recommended |
+|----------|-------------|
+| Single models and props | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| Cross-asset consistency across a full set | `chat_mode="agent", chat_tier="max"` |
 
-**Use `"agent"` for most 3D work.** It handles everything from single objects to batch generation.
+**The flash tier is the default and handles most 3D generation well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
 
-**Use `"agent team"` when you need cross-asset consistency** — like generating a full set of fantasy weapons that all share the same art style, or building a complete room of furniture that matches a design language.
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for 3D generation.
 
 ---
 

@@ -240,16 +240,16 @@ CellCog defaults to interactive HTML — the whole point is diagrams you can exp
 
 ---
 
-## Chat Mode for Diagrams
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Individual diagrams — flowcharts, org charts, ER diagrams, mind maps | `"agent"` |
-| Complex multi-diagram documentation, full system design docs with multiple views | `"agent team"` |
+| Scenario | Recommended |
+|----------|-------------|
+| Single diagrams and flowcharts | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| Multi-diagram system documentation | `chat_mode="agent", chat_tier="max"` |
 
-**Use `"agent"` for most diagrams.** Individual flowcharts, architecture diagrams, and org charts execute well in agent mode.
+**The flash tier is the default and handles most diagram work well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
 
-**Use `"agent team"` for comprehensive documentation** — when you need multiple interconnected diagrams that form a complete system design document.
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for diagram work.
 
 ---
 

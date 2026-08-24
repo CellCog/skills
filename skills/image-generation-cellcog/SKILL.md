@@ -45,15 +45,16 @@ print(result["message"])
 
 ---
 
-## What Models Do We Use
+## Choosing Mode & Tier
 
-| Model | Provider | Primary Use |
-|-------|----------|-------------|
-| **Nano Banana 2** (Gemini 3.1 Flash Image) | Google | Default image generation — photorealistic scenes, complex compositions, text rendering, multi-turn character consistency |
-| **GPT Image 1.5** | OpenAI | Transparent background images — logos, stickers, product cutouts, overlay graphics |
-| **Recraft** | Recraft AI | Scalable vector illustrations (SVG) and icon generation |
+| Scenario | Recommended |
+|----------|-------------|
+| Single images, edits, small sets | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| Brand-critical campaigns, large coordinated sets | `chat_mode="agent", chat_tier="max"` |
 
-**Nano Banana 2** is the default model for all image generation. CellCog's agents intelligently route to other models when the task calls for it — for example, transparent PNGs are automatically handled by GPT Image 1.5, and vector/icon requests go to Recraft. If you'd prefer a specific model, just mention it in your prompt (e.g., *"use ChatGPT/OpenAI image generation"*).
+**The flash tier is the default and handles most image generation well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
+
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for image generation.
 
 ## What Images You Can Create
 
@@ -135,17 +136,6 @@ Use existing images as references for style, character, or composition:
 
 ---
 
-## When to Use Agent Team Mode
-
-For image generation, `chat_mode="agent team"` is recommended for:
-- Complex scenes requiring multiple elements
-- Consistent character series
-- Reference-based generation requiring analysis
-- Sets of related images
-
-For simple single images, `chat_mode="agent"` can work faster.
-
----
 
 ## Example Image Prompts
 

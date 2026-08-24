@@ -29,6 +29,7 @@ result = client.create_chat(
     notify_session_key="agent:main:main",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 ```
 
@@ -40,6 +41,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
     chat_mode="agent",
+    chat_tier="max",
 )
 print(result["message"])
 ```
@@ -140,19 +142,16 @@ For lipsync videos:
 
 ---
 
-## When to Use Agent Team Mode
+## Choosing Mode & Tier
 
-For video generation, **always use `chat_mode="agent team"`** (the default).
+**Use `chat_mode="agent", chat_tier="max"` for video generation.** Video production is a multi-step pipeline — script, scenes, frames, audio, synthesis, QC review — and needs full reasoning depth.
 
-Video creation involves:
-- Script writing
-- Scene planning
-- Image generation for frames
-- Audio generation
-- Video synthesis
-- Quality review
+| Scenario | Recommended |
+|----------|-------------|
+| All video production | `chat_mode="agent", chat_tier="max"` |
+| Trivial single-shot clips | `chat_mode="agent"` (defaults to `"flash"`) |
 
-This multi-step process requires the full agent team for best results.
+Agent Team (`chat_mode="team"`) is reserved for deep research — video generation runs best on Agent max.
 
 ---
 

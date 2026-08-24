@@ -165,13 +165,16 @@ Think of it as pair programming for thinking:
 
 ---
 
-## Chat Mode for Thinking
+## Choosing Mode & Tier
 
-**Use `chat_mode="agent"`** for brainstorming-strategy-cellcog sessions.
+| Scenario | Recommended |
+|----------|-------------|
+| Ideation and strategy sessions | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| In-depth strategic analysis | `chat_mode="agent", chat_tier="max"` |
 
-Why not agent team? Agent team is designed for autonomous deep work with multiple internal passes. This skill is about collaborative iteration WITH you. Agent mode keeps the conversation flowing naturally.
+**The flash tier is the default and handles most brainstorming well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
 
-The magic happens in the back-and-forth, not in autonomous processing.
+Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for brainstorming.
 
 ---
 

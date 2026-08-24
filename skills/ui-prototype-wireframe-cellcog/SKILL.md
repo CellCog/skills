@@ -28,7 +28,7 @@ result = client.create_chat(
     prompt="[your task prompt]",
     notify_session_key="agent:main:main",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="creative",
 )
 ```
 
@@ -39,7 +39,7 @@ client = CellCogClient(agent_provider="openclaw|cursor|claude-code|codex|...")
 result = client.create_chat(
     prompt="[your task prompt]",
     task_label="my-task",
-    chat_mode="agent",
+    chat_mode="creative",
 )
 print(result["message"])
 ```
@@ -184,16 +184,17 @@ CellCog prototypes can include:
 
 ---
 
-## Chat Mode for Prototyping
+## Choosing Mode & Tier
 
-| Scenario | Recommended Mode |
-|----------|------------------|
-| Individual pages, single components, wireframes | `"agent"` |
-| Full app prototypes with multiple interconnected screens, design systems | `"agent team"` |
+**Use `chat_mode="creative"` for UI prototypes and wireframes** — the craft-first mode tuned for design taste, visual polish, and voice.
 
-**Use `"agent"` for most prototypes.** Landing pages, individual app screens, and component designs execute well in agent mode.
+| Scenario | Recommended |
+|----------|-------------|
+| Prototypes, wireframes, design systems | `chat_mode="creative"` (default tier `"core"`) |
+| Maximum craft on high-stakes pieces | `chat_mode="creative", chat_tier="max"` |
+| Quick disposable drafts | `chat_mode="agent"` (defaults to `"flash"`) |
 
-**Use `"agent team"` for full application prototypes** — multi-screen apps where navigation, state, and user flows need to work together cohesively.
+Note: `"creative"` has no `"flash"` tier. Agent Team (`chat_mode="team"`) is reserved for deep research.
 
 ---
 
