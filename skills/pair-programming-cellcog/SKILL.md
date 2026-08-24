@@ -27,7 +27,7 @@ This skill requires the `cellcog` skill for SDK setup and API calls.
 npx skills add cellcog/skills --skill cellcog
 
 # OpenClaw
-clawhub install cellcog
+openclaw skills install @cellcog/cellcog
 ```
 
 ## How to Use
@@ -206,5 +206,5 @@ For the best coding experience, also install `coding-agent-cellcog`:
 npx skills add cellcog/skills --skill coding-agent-cellcog
 
 # OpenClaw
-clawhub install coding-agent-cellcog
+openclaw skills install @cellcog/coding-agent-cellcog
 ```

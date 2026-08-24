@@ -60,7 +60,7 @@ This skill requires the `cellcog` skill for SDK setup and API calls.
 npx skills add cellcog/skills --skill cellcog
 
 # OpenClaw
-clawhub install cellcog
+openclaw skills install @cellcog/cellcog
 ```
 
 **Read the cellcog skill first** for SDK setup. This skill shows you how to use CellCog as a coding agent.
