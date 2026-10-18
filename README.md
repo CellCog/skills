@@ -37,6 +37,7 @@ Start with the **cellcog** skill — it carries the full SDK reference (file han
 | Skill | Description |
 |---|---|
 | `3d-model-generation-cellcog` | AI 3D model generation powered by CellCog. Text-to-3D, image-to-3D — production-ready GLB files for games, AR/VR, e-commerce, and 3D printing. Game assets, p... |
+| `ai-employees-cellcog` | Work with CellCog AI employees from your own agent: long-running teammates that keep memory, learn skills you teach them, run routines, and stay consistent a... |
 | `audio-generation-cellcog` | AI audio generation and text-to-speech powered by CellCog. Voiceover, narration, voice cloning, avatar voices, sound effects, music, podcasts, dialogue. Thre... |
 | `avatar-creation-cellcog` | AI avatar creation and digital persona design powered by CellCog. Character.ai for agents — create characters, clone voices, generate images, build personali... |
 | `brainstorming-strategy-cellcog` | AI brainstorming and strategy thinking partner powered by CellCog. Reasoning, problem-solving, ideation, strategic planning — then execution across every mod... |
@@ -63,11 +64,11 @@ Start with the **cellcog** skill — it carries the full SDK reference (file han
 | `news-briefing-cellcog` | AI news intelligence and daily briefing powered by CellCog. News digests, competitive intelligence, market updates, trend monitoring, industry reports, curre... |
 | `pair-programming-cellcog` | AI pair programming powered by CellCog Desktop. Code, debug, refactor, and build directly on the user's machine. Terminal access, file operations, full devel... |
 | `pdf-document-generation-cellcog` | AI PDF document generation powered by CellCog — PDF and DOCX output. Resumes, contracts, reports, proposals, invoices, certificates, NDAs, letters, brochures... |
-| `podcast-generation-cellcog` | AI podcast generation and production powered by CellCog. Full podcast episodes from a single prompt — multi-voice dialogue, intro/outro music, automatic edit... |
+| `podcast-generation-cellcog` | AI podcast generation and production powered by CellCog. Full podcast episodes from a single prompt — multi-voice dialogue with up to 10 distinct speakers, s... |
 | `presentation-slides-cellcog` | AI presentation slides and deck generation powered by CellCog. Pitch decks, keynotes, business presentations, educational slides, investor decks — PDF or nat... |
 | `project-management-cellcog` | AI project management powered by CellCog. Knowledge workspaces, document upload, AI-processed context trees, signed URL retrieval. Works standalone or as Cel... |
 | `resume-cover-letter-cellcog` | AI resume and cover letter generation powered by CellCog. ATS-optimized resumes, CVs, cover letters, LinkedIn profiles, career documents — PDF or DOCX. Resea... |
-| `seedance-video-generation-cellcog` | AI video generation powered by CellCog via Seedance. Cinematic 1080p video with smooth motion, multi-shot narratives, lipsync, voice synthesis, scoring. Comp... |
+| `seedance-video-generation-cellcog` | AI video generation powered by CellCog via Seedance 2.5. Complete multi-minute videos from a single prompt: scripting, voice synthesis, lipsync, scoring, edi... |
 | `sticker-generator-cellcog` | AI sticker generator and pack creation powered by CellCog. Custom stickers, emoji sets, WhatsApp stickers, Telegram stickers, Discord emoji, Slack reactions.... |
 | `stock-analysis-cellcog` | AI financial analysis and stock research powered by CellCog. Stock analysis, valuation models, portfolio optimization, earnings breakdowns, investment resear... |
 | `travel-planning-cellcog` | AI travel planning and itinerary generation powered by CellCog. Vacation planning, travel research, flight planning, hotel recommendations, visa requirements... |
