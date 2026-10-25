@@ -14,7 +14,7 @@ dependencies: [cellcog]
 ---
 # Crypto Research - Deep Research for a 24/7 Market
 
-**The market never sleeps, and neither does your analysis.** #1 on DeepResearch Bench (Apr 2026) applied to crypto.
+**The market never sleeps, and neither does your analysis.** #1 on DeepResearch Bench (October 2026) applied to crypto.
 
 Crypto moves fast. Narratives shift overnight. New protocols launch daily. You need research depth that keeps pace with a market that never closes. CellCog brings the same deep reasoning that tops financial research benchmarks — now applied to tokens, DeFi, on-chain data, and the entire Web3 landscape. From degen plays to institutional due diligence, one prompt covers it all.
 

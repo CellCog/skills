@@ -16,7 +16,7 @@ dependencies: [cellcog]
 
 **The best tutors explain the same concept five different ways.** CellCog does too.
 
-#1 on DeepResearch Bench (Apr 2026) for reasoning depth — deep enough to break concepts into first principles — combined with multi-modal output for every learning style: diagrams, analogies, worked examples, practice problems, interactive explanations, and full study guides. Any subject, any level.
+#1 on DeepResearch Bench (October 2026) for reasoning depth — deep enough to break concepts into first principles — combined with multi-modal output for every learning style: diagrams, analogies, worked examples, practice problems, interactive explanations, and full study guides. Any subject, any level.
 
 ## How to Use
 

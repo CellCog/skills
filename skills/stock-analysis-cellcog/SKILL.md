@@ -14,7 +14,7 @@ dependencies: [cellcog]
 ---
 # Stock Analysis - Wall Street-Grade Analysis, Accessible Globally
 
-**Wall Street-grade analysis, accessible globally.** Deep financial reasoning powered by #1 on DeepResearch Bench (Apr 2026) + SOTA financial models.
+**Wall Street-grade analysis, accessible globally.** Deep financial reasoning powered by #1 on DeepResearch Bench (October 2026) + SOTA financial models.
 
 The best financial analysis has always lived behind Bloomberg terminals, institutional research desks, and $500/hour consultants. CellCog brings that same depth — stock analysis, valuation models, portfolio optimization, earnings breakdowns — to anyone with a prompt. From raw tickers to boardroom-ready deliverables in one request.
 

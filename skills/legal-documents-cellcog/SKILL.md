@@ -16,7 +16,7 @@ dependencies: [cellcog]
 
 **Legal demands two things: frontier-level reasoning and precision document generation.** CellCog delivers both.
 
-Legal is the frontier of human intelligence — and it's done best when powered by the frontier of AI intelligence. #1 on DeepResearch Bench (Apr 2026) for the deep reasoning that legal work requires, paired with state-of-the-art PDF generation for documents that look as professional as the thinking behind them.
+Legal is the frontier of human intelligence — and it's done best when powered by the frontier of AI intelligence. #1 on DeepResearch Bench (October 2026) for the deep reasoning that legal work requires, paired with state-of-the-art PDF generation for documents that look as professional as the thinking behind them.
 
 ## How to Use
 
@@ -138,7 +138,7 @@ Essential documents for founders:
 
 ### The Two Pillars
 
-**1. Intelligence** — Legal work requires deep reasoning about context, jurisdiction, edge cases, and implications. CellCog's #1 ranking on DeepResearch Bench means it reasons about legal nuances at a level other AI tools can't match.
+**1. Intelligence** — Legal work requires deep reasoning about context, jurisdiction, edge cases, and implications. CellCog's #1 ranking on DeepResearch Bench (October 2026) means it reasons about legal nuances at a level other AI tools can't match.
 
 **2. Document Generation** — Legal documents need precise formatting, proper clause numbering, consistent terminology, and professional presentation. CellCog's state-of-the-art PDF generation produces documents that look like they came from a top law firm.
 

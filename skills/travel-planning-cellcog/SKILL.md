@@ -16,7 +16,7 @@ dependencies: [cellcog]
 
 **Real travel planning needs real research — not recycled blog listicles.**
 
-#1 on DeepResearch Bench (Apr 2026) applied to travel. CellCog researches current prices, visa requirements, weather patterns, local events, and hidden gems — then delivers complete itineraries as beautiful PDFs or interactive dashboards. Every recommendation grounded in fresh data, not outdated travel guides.
+#1 on DeepResearch Bench (October 2026) applied to travel. CellCog researches current prices, visa requirements, weather patterns, local events, and hidden gems — then delivers complete itineraries as beautiful PDFs or interactive dashboards. Every recommendation grounded in fresh data, not outdated travel guides.
 
 ## How to Use
 

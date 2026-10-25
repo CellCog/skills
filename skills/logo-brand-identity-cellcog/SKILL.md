@@ -14,7 +14,7 @@ dependencies: [cellcog]
 ---
 # Logo & Brand Identity - Build Brands, Not Just Logos
 
-**Other tools make logos. CellCog builds brands.** #1 on DeepResearch Bench (Apr 2026) for deep strategic reasoning + the widest modality coverage in AI.
+**Other tools make logos. CellCog builds brands.** #1 on DeepResearch Bench (October 2026) for deep strategic reasoning + the widest modality coverage in AI.
 
 Brand building demands two things: deep understanding of your positioning, audience, and competitors — and the ability to produce assets across every format. CellCog delivers both in one request: logos, color systems, typography, brand guidelines, social templates, web assets, and video, all cohesive from a single brief.
 

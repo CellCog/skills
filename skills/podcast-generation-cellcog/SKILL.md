@@ -16,7 +16,7 @@ dependencies: [cellcog]
 
 **A great podcast needs three things: compelling content, natural-sounding voices, and polished production.** CellCog delivers all three.
 
-- **Content quality:** #1 on DeepResearch Bench (July 2026) — scripts built on deep reasoning, not surface-level takes
+- **Content quality:** #1 on DeepResearch Bench (October 2026) — scripts built on deep reasoning, not surface-level takes
 - **Voice quality:** Frontier multi-voice dialogue (up to 10 distinct speakers) with natural delivery, emotional direction, interruptions, and pacing across speakers
 - **Production quality:** Structured episodes with cold opens and segment transitions, original music beds ducked under speech, broadcast loudness mastering (−16 LUFS, the Apple Podcasts spec), and a ready-to-publish MP3 — all from a single prompt
 

@@ -16,7 +16,7 @@ dependencies: [cellcog]
 
 **7 seconds.** That's how long the average recruiter spends on your resume. CellCog makes every second count.
 
-#1 on DeepResearch Bench (Apr 2026) — CellCog researches your target role, understands what hiring managers look for, optimizes for ATS systems, and generates beautifully designed resumes — PDF for polished presentation or DOCX when ATS systems require Word format. Not another template filler — a research-first resume engine.
+#1 on DeepResearch Bench (October 2026) — CellCog researches your target role, understands what hiring managers look for, optimizes for ATS systems, and generates beautifully designed resumes — PDF for polished presentation or DOCX when ATS systems require Word format. Not another template filler — a research-first resume engine.
 
 ## How to Use
 
