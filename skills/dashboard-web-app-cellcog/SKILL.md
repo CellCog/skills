@@ -136,9 +136,9 @@ You can provide data via:
 |----------|-------------|
 | Dashboards, KPI trackers, interactive apps | `chat_mode="creative"` (default tier `"core"`) |
 | Maximum craft on high-stakes pieces | `chat_mode="creative", chat_tier="max"` |
-| Quick disposable drafts | `chat_mode="agent"` (defaults to `"flash"`) |
+| Quick disposable drafts | `chat_mode="agent", chat_tier="flash"` |
 
-Note: `"creative"` has no `"flash"` tier. Agent Team (`chat_mode="team"`) is reserved for deep research.
+Note: Agent Team (`chat_mode="team"`) is reserved for deep research.
 
 ---
 

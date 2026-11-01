@@ -155,7 +155,7 @@ CellCog can create content in various aesthetics:
 | Scenario | Recommended |
 |----------|-------------|
 | Reels, TikToks, campaign series | `chat_mode="agent", chat_tier="max"` |
-| Single throwaway clips | `chat_mode="agent"` (defaults to `"flash"`) |
+| Single throwaway clips | `chat_mode="agent", chat_tier="flash"` |
 
 Agent Team (`chat_mode="team"`) is reserved for deep research — short-form video production runs best on Agent max.
 

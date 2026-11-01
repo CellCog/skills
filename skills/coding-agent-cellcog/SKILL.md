@@ -103,7 +103,7 @@ result = client.create_chat(
 ```
 
 **Key parameters:**
-- `chat_mode="agent", chat_tier="max"` — coding needs the deepest reasoning tier (the SDK applies `"max"` automatically when `enable_cowork=True`)
+- `chat_mode="agent", chat_tier="max"` — coding needs the deepest reasoning tier (pass it explicitly; the default tier is `"core"`, co-work included)
 - `enable_cowork=True` — Enables Co-work (direct machine access)
 - `cowork_working_directory` — The repo/directory to work in
 
@@ -161,7 +161,7 @@ Via CellCog Co-work, CodeCog operates directly on the user's filesystem:
 
 ## Choosing Mode & Tier
 
-**Use `chat_mode="agent", chat_tier="max"` for all coding work** — code needs the deepest reasoning tier. The SDK applies `"max"` automatically whenever `enable_cowork=True`, so co-work sessions get it even without an explicit tier.
+**Use `chat_mode="agent", chat_tier="max"` for all coding work** — code needs the deepest reasoning tier. Pass it explicitly: the default tier is `"core"`, co-work included.
 
 `"agent core"` is a legacy name that still works forever (the server maps it to Agent max), but new code should pass `chat_mode="agent", chat_tier="max"`.
 

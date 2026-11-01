@@ -53,7 +53,7 @@ print(result["message"])
 
 ## Choosing Mode & Tier
 
-**Use `chat_mode="agent"` (defaults to the `"flash"` tier)** — project/document management operations are light tasks; flash is fast and economical. Pass `chat_tier="max"` only when a chat will ALSO do heavy work (deep analysis over the project's documents, complex production). Agent Team (`chat_mode="team"`) is reserved for deep research.
+**Use `chat_mode="agent"` (defaults to the `"core"` tier)**: project/document management operations are light tasks; the default core tier handles them well. Pass `chat_tier="max"` only when a chat will ALSO do heavy work (deep analysis over the project's documents, complex production). Agent Team (`chat_mode="team"`) is reserved for deep research.
 
 ---
 

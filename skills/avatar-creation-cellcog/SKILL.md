@@ -200,7 +200,7 @@ Grumbleton is skeptical, Luna is optimistic. Both stay in character.
 | Scenario | Recommended |
 |----------|-------------|
 | Avatar videos, multi-avatar scenes | `chat_mode="agent", chat_tier="max"` |
-| Single avatar stills | `chat_mode="agent"` (defaults to `"flash"`) |
+| Single avatar stills | `chat_mode="agent", chat_tier="flash"` |
 
 Agent Team (`chat_mode="team"`) is reserved for deep research — avatar video production runs best on Agent max.
 

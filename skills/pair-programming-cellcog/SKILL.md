@@ -154,7 +154,7 @@ All commands output JSON for easy agent parsing:
 
 ## Choosing Mode & Tier
 
-**Use `chat_mode="agent", chat_tier="max"` for all coding work** — code needs the deepest reasoning tier. The SDK applies `"max"` automatically whenever `enable_cowork=True`, so co-work sessions get it even without an explicit tier.
+**Use `chat_mode="agent", chat_tier="max"` for all coding work** — code needs the deepest reasoning tier. Pass it explicitly: the default tier is `"core"`, co-work included.
 
 `"agent core"` is a legacy name that still works forever (the server maps it to Agent max), but new code should pass `chat_mode="agent", chat_tier="max"`.
 

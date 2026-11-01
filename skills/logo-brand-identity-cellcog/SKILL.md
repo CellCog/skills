@@ -178,9 +178,9 @@ A complete brand kit typically includes:
 |----------|-------------|
 | Logos, brand systems, identity packages | `chat_mode="creative"` (default tier `"core"`) |
 | Maximum craft on high-stakes pieces | `chat_mode="creative", chat_tier="max"` |
-| Quick disposable drafts | `chat_mode="agent"` (defaults to `"flash"`) |
+| Quick disposable drafts | `chat_mode="agent", chat_tier="flash"` |
 
-Note: `"creative"` has no `"flash"` tier. Agent Team (`chat_mode="team"`) is reserved for deep research.
+Note: Agent Team (`chat_mode="team"`) is reserved for deep research.
 
 ---
 

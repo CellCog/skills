@@ -154,7 +154,7 @@ Content planning before production:
 | Scenario | Recommended |
 |----------|-------------|
 | Full videos, documentaries, video essays | `chat_mode="agent", chat_tier="max"` |
-| Quick shorts or tests | `chat_mode="agent"` (defaults to `"flash"`) |
+| Quick shorts or tests | `chat_mode="agent", chat_tier="flash"` |
 
 Agent Team (`chat_mode="team"`) is reserved for deep research — YouTube video production runs best on Agent max.
 

@@ -232,7 +232,7 @@ result = client.create_chat(
     prompt="...",
     task_label="...",
     chat_mode="agent",                      # See Chat Modes & Tiers below
-    chat_tier="max",                        # "flash" | "core" | "max" — omit for the SDK default
+    chat_tier="max",                        # "flash" | "core" | "max" — omit for the default, "core"
     delivery="send_only",                   # fire-and-forget (see below); default blocks until done
     project_id="...",                       # install project-management-cellcog for details
     agent_role_id="...",                    # install project-management-cellcog for details
@@ -332,10 +332,11 @@ Every CellCog chat runs at a (mode, tier) operating point: `chat_mode` picks the
 | `"team"` | Deep research ONLY — multi-source synthesis, cross-validation, citations | `"flash"` / `"core"` / `"max"` | 1,000 (max tier: 2,000) |
 
 **Picking a tier in agent mode:**
-- **Omit `chat_tier`** → the SDK defaults to `"flash"` — right for simple asset generation and light tasks (fast, economical).
-- **Coding / co-work → `"max"`.** The SDK applies `"max"` automatically when `enable_cowork=True`.
+- **Omit `chat_tier`** → the default, `"core"`, in every mode (co-work included): balanced speed and depth, right for most work.
+- **Coding / co-work → `"max"`.** Pass it explicitly.
+- **Quick, simple assets** → `"flash"` (fastest, most economical).
 - **Heavy multi-step production** (video generation, data analysis, financial models, legal drafting) → `"max"`.
-- Quality disappointing on flash? Re-run the same prompt with `chat_tier="max"`.
+- Quality disappointing? Re-run the same prompt with `chat_tier="max"`.
 
 **Use `"team"` only for deep research.** Agent max is now strong enough for almost every other use case — including video generation, which historically needed team mode and no longer does.
 

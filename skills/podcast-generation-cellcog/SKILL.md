@@ -226,7 +226,7 @@ Strategic content development:
 | Scenario | Recommended |
 |----------|-------------|
 | Full episodes, narrative series | `chat_mode="agent", chat_tier="max"` |
-| Short single-voice segments | `chat_mode="agent"` (defaults to `"flash"`) |
+| Short single-voice segments | `chat_mode="agent", chat_tier="flash"` |
 
 Agent Team (`chat_mode="team"`) is reserved for deep research — podcast production runs best on Agent max.
 

@@ -108,10 +108,10 @@ Transform and enhance existing images:
 
 | Scenario | Recommended |
 |----------|-------------|
-| Quick generations and edits | `chat_mode="agent"` (defaults to the `"flash"` tier) |
+| Quick generations and edits | `chat_mode="agent"` (defaults to the `"core"` tier) |
 | Large sets with strict brand guidelines | `chat_mode="agent", chat_tier="max"` |
 
-**The flash tier is the default and handles most image work well** — fast and economical. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
+**The core tier is the default and handles most image work well**, balanced speed and depth. **Upgrade to `chat_tier="max"`** when quality disappoints or the work is genuinely complex: just re-run the same prompt with `chat_tier="max"`.
 
 Agent Team (`chat_mode="team"`) is reserved for deep research — don't use it for image work.
 

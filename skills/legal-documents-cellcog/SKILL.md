@@ -158,7 +158,7 @@ Essential documents for founders:
 | Scenario | Recommended |
 |----------|-------------|
 | Contracts, filings, compliance documents | `chat_mode="agent", chat_tier="max"` |
-| Informal summaries of a document you provide | `chat_mode="agent"` (defaults to `"flash"`) |
+| Informal summaries of a document you provide | `chat_mode="agent", chat_tier="flash"` |
 
 Agent Team (`chat_mode="team"`) is reserved for deep research — legal work runs best on Agent max.
 `chat_mode="team"` for multi-jurisdiction regulatory RESEARCH (research, not drafting).

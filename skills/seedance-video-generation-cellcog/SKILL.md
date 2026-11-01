@@ -125,7 +125,7 @@ Script Writing → Scene Planning → Frame Generation → Voice Synthesis
 | Scenario | Recommended |
 |----------|-------------|
 | Films and multi-segment productions | `chat_mode="agent", chat_tier="max"` |
-| Single short test clips | `chat_mode="agent"` (defaults to `"flash"`) |
+| Single short test clips | `chat_mode="agent", chat_tier="flash"` |
 
 Agent Team (`chat_mode="team"`) is reserved for deep research — video generation runs best on Agent max.
 

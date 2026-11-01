@@ -176,7 +176,7 @@ Complete narrative filmmaking:
 | Scenario | Recommended |
 |----------|-------------|
 | Films, multi-scene cinematics, brand films | `chat_mode="agent", chat_tier="max"` |
-| Quick single-shot experiments | `chat_mode="agent"` (defaults to `"flash"`) |
+| Quick single-shot experiments | `chat_mode="agent", chat_tier="flash"` |
 
 Agent Team (`chat_mode="team"`) is reserved for deep research — cinematic work runs best on Agent max.
 
